@@ -1,8 +1,8 @@
 import gens from './Gens.js';
 import methods from './Methods.js';
 
-class Main {
-  constructor(gen = 8, method = 'meetings') {
+export default class Main {
+  constructor(gen = 8) {
     this._genSelector = document.getElementById('genSelect');
     this._methodSelector = document.getElementById('methodSelect');
     this._chromaRow = document.getElementById('chromaCharmRow');
@@ -113,5 +113,3 @@ class Main {
     console.log(this.method);
   }
 }
-
-export default new Main();
