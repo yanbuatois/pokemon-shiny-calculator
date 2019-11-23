@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon shiney probability calculator</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group mt-1 row">
+                    <label class="col-3 col-form-label" for="genSelect">Generation:</label>
+                    <select class="form-control col" id="genSelect">
+                        <option value="8" selected>8</option>
+                        <option value="7">7</option>
+                        <option value="6">6</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="form-group row">
+                    <label for="methodSelect" class="col-3 col-form-label">Method:</label>
+                    <select id="methodSelect" class="form-control col">
+                    </select>
+                </div>
+                <div class="form-group row" id="chromaCharmRow">
+                    <div class="col">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" value="true" id="chromaCharmCb">
+                            <label for="chromaCharmCb" class="form-check-label">
+                                Chroma Charm
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <form method="post" action="#" id="meetingsForm" class="form-group row">
+                    <label class="col-3 col-form-label" for="meetingsInput">Meetings number:</label>
+                    <div class="input-group col">
+                        <input type="number" min="0" step="1" id="meetingsInput" class="form-control" value="0">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Meetings</span>
+                            <button type="submit" class="btn btn-success">Compute</button>
+                        </div>
+                    </div>
+                </form>
+                <form action="#" method="post" id="probaForm" class="form-group row">
+                    <label for="probaInput" class="col-3 col-form-label">Probability you want to have :</label>
+                    <div class="input-group col">
+                        <input type="number" min="0" max="100" step=".000001" value="0" class="form-control" id="probaInput">
+                        <div class="input-group-append">
+                            <span class="input-group-text">%</span>
+                            <button type="submit" class="btn btn-success">Compute</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-group row">
+                    <div class="col" id="resultRow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/main.js" type="module"></script>
+</body>
+</html>
